@@ -1,0 +1,192 @@
+html {
+	font-size: 16px;
+}
+input:invalid {
+	border: 1px solid red;
+}
+input:valid {
+	border: 1px solid green;
+}
+input:focus{
+	background-color: #dac292;
+	font-size: 1rem;
+	font-family: FreeMono, monospace;
+}
+input:not(:focus) {
+	background-color:#b9936c;
+	font-size: 1rem;
+	font-family: FreeMono, monospace;
+}
+.rojo {
+	font-size: 0.6rem;
+	color: red;
+}
+table {
+	border: 1px solid #b9936c;
+	width: 100%;
+	background-color:  #e6e2d3;
+}
+table th {
+	text-align: left;
+}
+.tablaDatos, .tablaDireccion td {
+	text-align: right;
+	padding: 0rem; 
+}
+.tablaEstudios {
+	display: flex;
+	flex-flow: row wrap;
+}
+h3 {
+	color: black;
+}
+fieldset {
+	background-color:  #dac292;
+	border: 1px solid #b9936c;
+	font-family: 'Gugi', cursive;
+}
+fieldset label {
+	font-family: FreeMono, monospace;
+}
+#otros span{
+	display: none;
+}
+#contenedor {
+	margin: auto;
+	box-sizing: border-box;
+	background-color: #e6e2d3;
+	width: 100%;
+}
+header {
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	align-items: stretch;
+}
+header h1 {
+	flex: 1 1 100%;
+	text-align: center;
+	color: white;
+	background-color: #b9936c;
+	margin:0;
+	height: 3rem;
+	padding-top:1rem;
+	font-family: 'Amatic SC';
+}
+header h3 {
+	background-color:   #c4b7a6;
+	flex: 1 1 100%;
+	text-align: center;
+	color: black;
+	margin-top: 0;
+	height: 2rem;
+	padding-top:0.5rem;
+	font-family: 'Bungee Outline';
+}
+main {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	box-sizing: border-box;
+}
+.datos, .direccion, .estudios, .botones{
+	flex: 1 1 100%;
+
+}
+footer h2{
+	text-align: center;
+	font-family: 'Amatic SC';
+	background-color: #c4b7a6;
+}
+footer .fecha, .estudios1 {
+	display: none;
+}
+
+/*--------------------------------------------------------------*/
+@media screen and (min-width: 600px) {
+	html {
+		font-size: 20px;
+	}
+	input:focus{
+		background-color: rgb(178,173,127);
+		color: white;
+		font-size: 1rem;
+	}
+	input:not(:focus) {
+		background-color: #a2b9bc;
+		font-size: 1rem;
+	}
+	header  {
+		justify-content: space-between;
+	}
+	header h1 {
+		flex: 1 1 50%;
+		background-color: #878f99;
+		text-align: left;
+		font-size: 2.7rem;
+		color: black;
+		padding-left: 1rem;
+		padding-top: 0;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		letter-spacing: 1rem;
+
+	}
+	header h3 {
+		flex: 1 1 45%;
+		height: 2.5rem;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		background-color: #878f99;
+		text-align: right;
+		padding-right: 1rem;
+		letter-spacing: 0.3rem;
+	}
+
+	.datos, .direccion, .estudios, .botones{
+		display: flex;
+	    flex-flow: row wrap;
+	    justify-content: center;
+
+	}
+	.datos fieldset, .direccion fieldset, .estudios fieldset, .botones fieldset {
+		width: 40rem;
+	}
+	.estudios1 {
+		display: block;
+	}
+	#contenedor {
+		background-color: rgb(178,173,127,0.4);
+	}
+	.uno {
+		color: #b2ad7f;
+	}
+	fieldset {
+		background-color:  #a2b9bc;
+		border: 1px solid #878f99;
+	}
+	table {
+		border: 1px solid #878f99;
+		background-color:  #6b5b95;
+	}
+	label {
+		color: white;
+	}
+
+	footer {
+		background-color:  #878f99;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		margin-top: 1rem;
+	}
+	footer h2 {
+		letter-spacing: 0.4rem;
+		background-color:  #878f99;
+	}
+	footer .fecha {
+		display: inline-block;
+	}
+}

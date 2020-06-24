@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> Formulario</title>
+	<link rel="stylesheet" href="styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Bungee Outline' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+
+	<script src="hoja1.js"></script>
+</head>
+<body>
+	<div id="contenedor">
+		<header>
+			<h1>FORMULARIO</h1>
+			<h3>Diseño de Interfaces</h3>
+		</header>
+		<main>
+			<div></div>
+			<div class="datos">
+				<form action="" name="formulario" id="formulario" autocomplete="">
+					<fieldset>
+						<legend><h3>Datos Personales</h3></legend>
+						<table class="tablaDatos">
+							<tr>
+								<th>
+									<label for="nombre">Nombre <span class="uno">*</span></label>
+								</th>
+								<td>
+									<input type="text" name="nombre" id="nombre" pattern="[A-Z]{1}[a-z]{2,}" title="El nombre debe comenzar con mayúscula y tener al menos tres caracteres" required="required">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="apellidos">Apellidos <span class="uno">*</span></label>
+								</th>
+								<td>
+									<input type="text" name="apellidos" id="apellidos" required="required">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="userMail">Email <span class="uno">*</span></label>
+								</th>
+								<td>
+									<input type="email" name="userMail" id="userMail" required="required">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="telf">Telefono móvil (sólo territorio nacional) <span class="uno">*</span></label>
+								</th>
+								<td>
+									<input type="tel" name="telf" id="telf" required="required" pattern="[6]{1}[0-9]{8}" placeholder="6........" title="El número introducido no tiene el formato indicado">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="internacional" id="internacionalLabel">Telefono móvil (prefijo internacional) <span class="uno">*</span></label>
+								</th>
+								<td>
+									<input type="tel" name="internacional" id="internacional" required="required"  placeholder="+34 ........" title="">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="pass">Contraseña <span class="uno">*</span></label>
+								</th>
+								<td>
+									<input type="password" name="pass" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Mayusculas, minusculas y 8 caracteres" required="required">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="pass2">Confirmar contraseña <span class="uno">*</span></label>
+								</th>
+								<td>
+									<input type="password" name="pass2" id="pass2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required="required">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="dni">DNI <span class="uno">*</span></label>
+								</th>
+								<td>
+									<input type="text" name="dni" id="dni" pattern="[0-9]{8}[A-Za-z]{1}" title="El DNI debe estar formado por 8 números y una letra" required="required">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="fecha">Fecha Nacimiento <span class="uno">*</span></label>
+								</th>
+								<td>
+									<input type="date" name="fecha" id="fecha">
+								</td>	
+							</tr>	
+							<tr>
+								<th>
+									<label for="genero" id="generoLabel">Sexo <span class="uno">*</span></label>
+								</th>
+								<td>
+									<input type="radio" name="genero"  value="hombre"><label for="">Hombre</label> 
+									<input type="radio" name="genero" value="mujer"><label for="">Mujer</label> 
+								</td>
+							</tr>
+						</table>
+					</fieldset>
+				</form>
+			</div>
+			<div></div>
+			<div class="direccion">
+				<fieldset>
+					<legend><h3>Dirección</h3></legend>
+					<table class="tablaDireccion">
+						<tr>
+							<th>
+								<label for="calle">Calle <span class="uno">*</span></label>
+							</th>
+							<td>
+								<input type="text" name="calle" id="calle" required="required" form="formulario">
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<label for="numero">Numero <span class="uno">*</span></label>
+							</th>
+							<td>
+								<input type="text" name="numero" id="numero" required="required" size="6" form="formulario">
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<label for="piso">Piso <span class="uno">*</span></label>
+							</th>
+							<td>
+								<input type="text" name="piso" id="piso" required="required" size="6" form="formulario">
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<label for="provincia">Provincia <span class="uno">*</span></label>
+							</th>
+							<td>
+								<select name="provincia" id="provincia" form="formulario" required="required">
+									<option value="coru">A Coruña</option>
+									<option value="orense">Orense</option>
+									<option value="lugo">Lugo</option>
+									<option value="ponte">Pontevedra</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<label for="cp">Código Postal<span class="uno">*</span></label>
+							</th>
+							<td>
+								<input type="text" name="cp" id="cp" required="required" pattern="[0-9]{5}" size="8" form="formulario" title="Debe estar formado por 5 números">
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			</div>	
+			<div class="estudios">
+				<fieldset>
+					<legend><h3>Datos Academicos</h3></legend>
+					<table class="tablaEstudios">
+						<tr>
+							<th>
+								<label for="" id="estudiosLabel">Estudios <span class="uno">*</span></label>
+							</th>
+							<div class="one">
+								<td>
+									<input type="checkbox" name="daw" value="DAW" form="formulario"><label for="">Desarrollo de aplicaciones web
+									<br></label>
+									<input type="checkbox" name="asi" value="ASI" form="formulario"><label for="">Administración de sistemas</label> 
+									<br>
+									<input type="checkbox" name="dam" value="DAM" form="formulario"><label for="">Desarrollo de aplicaciones multiplataforma </label> 
+									<br>
+									<input type="checkbox" name="otros" id="otros" value="otros" form="formulario"><label for=""><span>Otros</span></label> 
+								</td>
+							</div>
+							
+
+						</tr>
+						<tr class="estudios1">
+							<th>
+								<label for="">Horas de clase al dia (entre 1 y 6)</label>
+							</th>
+							<td>
+								<input type="number" min="1" max="6" form="formulario">
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<label for="nivel">Nivel de estudios <span class="uno">*</span></label>
+							</th>
+							<td>
+								<select id="nivel" name="nivel" form="formulario" required="required">
+									<option value="">-Selecciona un valor-</option>
+									<option value="EGB" form="formulario">EGB</option>
+									<option value="ESO" form="formulario">ESO</option> 
+									<option value="BUP" form="formulario">BUP</option>
+									<option value="diplomatura" form="formulario">Diplomatura</option> 
+									<option value="licenciatura" form="formulario">Licenciatura</option> 
+								</select>
+							</td>
+						</tr>
+						<tr class="estudios1">
+							<th>
+								<label for="ingles">Nivel de Inglés</label>
+							</th>
+							<td>
+								<input type="range" name="ingles" id="ingles" min="1" max="10" form="formulario">
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			</div>
+			<div class="botones">	
+				<fieldset>
+					<legend><h3>Acciones a realizar</h3></legend>
+					<table>
+						<tr>
+							<th>
+								<input type="checkbox" name="terminos" id="terminos" form="formulario">
+								<label for="terminos">Acepto términos y condiciones</label>
+							</th>
+							<td>
+								<!--<button name="enviar" id="enviar" disabled="true" form="formulario">Enviar</button>-->
+								<input type="submit" value="Enviar" name="enviar" id="enviar" disabled="true" form="formulario">
+								<input type="reset" form="formulario" value="Reset">
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			</div>	
+		</main>
+		<footer>
+			<h2>
+				Andres Lage Freire
+			</h2>
+			<h2 class="fecha">
+				3ª Evaluación
+			</h2>
+		</footer>
+	</div>
+	
+</body>
+</html>
